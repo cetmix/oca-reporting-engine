@@ -44,9 +44,7 @@ class ReportController(report.ReportController):
                 ("Content-Length", len(xlsx)),
             ]
             return request.make_response(xlsx, headers=xlsxhttpheaders)
-        return super(ReportController, self).report_routes(
-            reportname, docids, converter, **data
-        )
+        return super().report_routes(reportname, docids, converter, **data)
 
     @route()
     def report_download(self, data, context=None):
@@ -96,7 +94,7 @@ class ReportController(report.ReportController):
                     )
                 return response
             else:
-                return super(ReportController, self).report_download(data, context)
+                return super().report_download(data, context)
         except Exception as e:
             _logger.exception("Error while generating report %s", reportname)
             se = _serialize_exception(e)

@@ -10,7 +10,7 @@ from odoo.tests.common import SingleTransactionCase
 class TestBiSqlViewEditor(SingleTransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestBiSqlViewEditor, cls).setUpClass()
+        super().setUpClass()
 
         cls.res_partner = cls.env["res.partner"]
         cls.res_users = cls.env["res.users"]

@@ -46,7 +46,7 @@ class Report(models.Model):
             return super(Report, self.with_context(res_ids=res_ids))._render_qweb_pdf(
                 res_ids=res_ids, data=data
             )
-        return super(Report, self)._render_qweb_pdf(res_ids=res_ids, data=data)
+        return super()._render_qweb_pdf(res_ids=res_ids, data=data)
 
     def pdf_has_usable_pages(self, numpages):
         if numpages < 1:
@@ -69,7 +69,7 @@ class Report(models.Model):
         specific_paperformat_args=None,
         set_viewport_size=False,
     ):
-        result = super(Report, self)._run_wkhtmltopdf(
+        result = super()._run_wkhtmltopdf(
             bodies,
             header=header,
             footer=footer,

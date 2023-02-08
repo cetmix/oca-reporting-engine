@@ -176,7 +176,7 @@ class BiSQLViewField(models.Model):
                 "many2one_model_id": many2one_model_id,
             }
         )
-        return super(BiSQLViewField, self).create(vals)
+        return super().create(vals)
 
     # Custom Section
     @api.model

@@ -46,7 +46,7 @@ class TestCommentTemplate(common.TransactionCase):
     @classmethod
     def tearDownClass(cls):
         teardown_test_model(cls.env, ResUsers)
-        return super(TestCommentTemplate, cls).tearDownClass()
+        return super().tearDownClass()
 
     def test_template_model_ids(self):
         self.assertIn(
